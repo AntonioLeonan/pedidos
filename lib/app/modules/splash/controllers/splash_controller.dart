@@ -14,11 +14,10 @@ class SplashController extends GetxController
       vsync: this,
       duration: Duration(seconds: 2),
     );
-
     animation = Tween(begin: -1.0, end: 1.0).animate(animationController);
     animationController.forward();
     Future.delayed(Duration(seconds: 3)).then((value) {
-      Get.toNamed(Routes.LOGIN);
+      Get.offAndToNamed(Routes.LOGIN);
     });
   }
 
